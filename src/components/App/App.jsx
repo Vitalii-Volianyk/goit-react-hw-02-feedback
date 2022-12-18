@@ -13,9 +13,7 @@ class App extends Component {
   };
   onLeaveFeedback = option => {
     this.setState(prevState => {
-      let feedback = {};
-      feedback[option] = prevState[option] + 1;
-      return feedback;
+      return { [option]: prevState[option] + 1 };
     });
   };
   getTotalFeedback() {
