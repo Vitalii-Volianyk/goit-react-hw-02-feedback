@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import css from './App.module.css';
+// import css from './App.module.css';
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/Statistics';
 import Notification from 'components/Notification';
