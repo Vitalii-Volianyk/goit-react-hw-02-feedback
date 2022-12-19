@@ -1,5 +1,5 @@
 import { Component } from 'react';
-// import css from './App.module.css';
+import css from './App.module.css';
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/Statistics';
 import Notification from 'components/Notification';
@@ -26,7 +26,7 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
     const total = this.getTotalFeedback();
     return (
-      <>
+      <div className={css.container}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
@@ -43,10 +43,10 @@ class App extends Component {
               positivePercentage={this.getPositivePercentage()}
             />
           ) : (
-            <Notification message="There is no feedback"></Notification>
+            <Notification message="There is no feedback!"></Notification>
           )}
         </Section>
-      </>
+      </div>
     );
   }
 }
